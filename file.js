@@ -236,3 +236,7 @@ nextBtn.addEventListener("click", nextPageHandler);
 winnerPlayAgainBtn.addEventListener("click", playAgainHandler);
 rulesBtn.addEventListener("click", showRulesHandler);
 crossBtn.addEventListener("click", removeRulesHandler);
+
+export default (req, res) => {
+  res.status(200).json({ message: "Function executed successfully" });
+};
