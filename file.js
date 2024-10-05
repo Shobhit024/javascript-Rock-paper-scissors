@@ -210,6 +210,11 @@ const playAgainHandler = (event) => {
 };
 
 const nextPageHandler = () => {
+  const initialScores = { user: 0, computer: 0 };
+  localStorage.setItem("scores", JSON.stringify(initialScores));
+
+  // Update the score display to reflect the reset scores
+  updateScoreDisplay();
   // make winner screen visible
   mainScreen.style.display = "none";
   winnerScreen.style.display = "flex";
